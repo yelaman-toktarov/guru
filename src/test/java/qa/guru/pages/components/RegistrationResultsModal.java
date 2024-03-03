@@ -1,9 +1,6 @@
 package qa.guru.pages.components;
 
-import com.codeborne.selenide.SelenideElement;
-
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -19,6 +16,7 @@ public class RegistrationResultsModal {
 
     public void verifyModalAppears() {
         $(".modal-dialog").should(appear);
+        $(".modal-dialog").shouldBe(visible);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
     }
 
@@ -28,23 +26,23 @@ public class RegistrationResultsModal {
     }
 
 
-    public String getStudentName() {
+    public String getStudentNameLocator() {
         return studentName;
     }
 
-    public String getStudentEmail() {
+    public String getStudentEmailLocator() {
         return studentEmail;
     }
 
-    public String getGender() {
+    public String getGenderLocator() {
         return gender;
     }
 
-    public String getMobile() {
+    public String getMobileLocator() {
         return mobile;
     }
 
-    public String getDateOfBirthay() {
+    public String getDateOfBirthayLocator() {
         return dateOfBirth;
     }
 

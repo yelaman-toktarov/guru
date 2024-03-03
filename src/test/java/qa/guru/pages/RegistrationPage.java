@@ -19,7 +19,6 @@ public class RegistrationPage {
     public RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
 
     public RegistrationPage() {
-        Selenide.open(this.URL);
     }
     private SelenideElement
             firstNameLocator = $("#firstName"),
